@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
+import android.provider.Settings;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
@@ -28,7 +29,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         super.onMessageReceived(remoteMessage);
 
         if (remoteMessage.getData().isEmpty())
-            showNotification(remoteMessage.getNotification().getTitle(),remoteMessage.getNotification().getBody() );
+            showNotification(remoteMessage.getNotification().getTitle(),remoteMessage.getNotification().getBody());
 
         else
             showNotification(remoteMessage.getData() );
@@ -106,6 +107,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         super.onNewToken(s);
         String refreshedToken = s;
         Log.d("new_token", "Refreshed token: " + s);
-        myRef.child("users").child("token").setValue(refreshedToken);
+        String device_id = Settings.Secure.getString(getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        myRef.child("users").child(device_id).child("token").setValue(refreshedToken);
     }
 }
