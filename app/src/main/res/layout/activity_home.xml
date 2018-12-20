@@ -1,51 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_home"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".HomeActivity"
-    android:background="@drawable/gradient_background_home">
+    tools:context=".HomeActivity">
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/sub_toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/darkblue"/>-->
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
-    <!--<Button-->
-        <!--android:id="@+id/button4"-->
-        <!--android:layout_width="130dp"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:text="Settings"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
-    <!--<Button-->
-        <!--android:id="@+id/button3"-->
-        <!--android:layout_width="134dp"-->
-        <!--android:layout_height="45dp"-->
-        <!--android:layout_marginStart="36dp"-->
-        <!--android:layout_marginTop="16dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:onClick="addNumber"-->
-        <!--android:text="Add Number"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/recycler_view"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.538" />-->
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floating_action_button"
@@ -55,6 +37,8 @@
         android:layout_margin="@dimen/fab_margin"
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="33dp"
+        android:backgroundTint="@color/darkblue"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_add" />

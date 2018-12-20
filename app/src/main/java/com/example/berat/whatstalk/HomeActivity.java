@@ -74,7 +74,7 @@ public class HomeActivity extends AppCompatActivity {
             Toast.makeText(this,"Settings Tıklandı", Toast.LENGTH_SHORT).show();
         }
         if (id==R.id.action_privacy){
-            startActivity(new Intent(HomeActivity.this, AddNumberActivity.class));
+            startActivity(new Intent(HomeActivity.this, PrivacyPolicyActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }

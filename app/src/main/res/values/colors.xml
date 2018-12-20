@@ -5,4 +5,6 @@
     <color name="colorAccent">#005073</color>
     <color name="colorSplash">#f9fafc</color>
     <color name="colorShape">#f9daaf</color>
+    <color name="white">#ffffff</color>
+    <color name="darkblue">#031122</color>
 </resources>

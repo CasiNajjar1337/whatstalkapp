@@ -24,13 +24,20 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.hbb20.CountryCodePicker;
 
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 public class AddNumberActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
+
+    CountryCodePicker ccp;
+    EditText editTextCarrierNumber;
+    String countryCode, countryName;
 
     //Initialize Firestore
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -42,14 +49,29 @@ public class AddNumberActivity extends AppCompatActivity {
 
     }
 
+    public void getCountryCode(){
+    countryCode = ccp.getFullNumber();
+    countryName = ccp.getSelectedCountryName();
+    }
+
+
     public void onClickBtn(View v)
     {   EditText name = (EditText) findViewById(R.id.name_to_add);
-        EditText number = (EditText) findViewById(R.id.number_to_add);
+//        EditText number = (EditText) findViewById(R.id.number_to_add);
+        ccp = (CountryCodePicker) findViewById(R.id.ccp);
+
         String nameToSend = name.getText().toString();
-        String numberToSend = number.getText().toString();
+//        String numberToSend = number.getText().toString();
+
+        editTextCarrierNumber = (EditText) findViewById(R.id.number_to_add);
+        String numberToSend = editTextCarrierNumber.getText().toString();
+
+        ccp.registerCarrierNumberEditText(editTextCarrierNumber);
+
+        getCountryCode();
 
         myRef.child("users").child(numberToSend).child("name").setValue(nameToSend);
-        myRef.child("users").child(numberToSend).child("number").setValue(numberToSend);
+        myRef.child("users").child(numberToSend).child("number").setValue(countryCode+numberToSend);
 
         openDialog();
 

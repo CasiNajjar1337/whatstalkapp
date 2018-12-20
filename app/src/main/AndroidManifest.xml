@@ -16,10 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity"
-            android:theme="@style/AppTheme2"/>
-        <activity android:name=".AddNumberActivity"
-            android:parentActivityName=".MainActivity">
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".AddNumberActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme2">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -31,6 +35,11 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:theme="@style/AppTheme2">
+        </activity>
     </application>
 
 </manifest>
