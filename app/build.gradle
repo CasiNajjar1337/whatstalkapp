@@ -32,13 +32,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:16.0.1'
     implementation 'com.hbb20:ccp:2.2.3'
     implementation 'com.google.firebase:firebase-messaging:17.3.4'
-<<<<<<< Updated upstream
+
 
     implementation 'com.hbb20:ccp:2.2.3'
-
-=======
     implementation 'com.android.support:multidex:1.0.3'
->>>>>>> Stashed changes
     implementation 'com.google.firebase:firebase-firestore:17.0.1'
 }
 apply plugin: 'com.google.gms.google-services'

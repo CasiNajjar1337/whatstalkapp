@@ -29,11 +29,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-<<<<<<< Updated upstream
+
 import com.hbb20.CountryCodePicker;
-=======
+
 import com.google.firebase.messaging.FirebaseMessagingService;
->>>>>>> Stashed changes
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -59,7 +59,7 @@ public class AddNumberActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_number);
 
     }
-<<<<<<< Updated upstream
+
 
     public void getCountryCode(){
     countryCode = ccp.getFullNumber();
@@ -67,15 +67,14 @@ public class AddNumberActivity extends AppCompatActivity {
     }
 
 
-=======
->>>>>>> Stashed changes
+
     public void onClickBtn(View v)
     {   EditText name = (EditText) findViewById(R.id.name_to_add);
 //        EditText number = (EditText) findViewById(R.id.number_to_add);
         ccp = (CountryCodePicker) findViewById(R.id.ccp);
 
         String nameToSend = name.getText().toString();
-<<<<<<< Updated upstream
+
 //        String numberToSend = number.getText().toString();
 
         editTextCarrierNumber = (EditText) findViewById(R.id.number_to_add);
@@ -87,7 +86,7 @@ public class AddNumberActivity extends AppCompatActivity {
 
         myRef.child("users").child(numberToSend).child("name").setValue(nameToSend);
         myRef.child("users").child(numberToSend).child("number").setValue(countryCode+numberToSend);
-=======
+
         final String numberToSend = number.getText().toString();
         String device_id = Settings.Secure.getString(getContentResolver(),
             Settings.Secure.ANDROID_ID);
@@ -96,7 +95,7 @@ public class AddNumberActivity extends AppCompatActivity {
         myRef.child("users").child(device_id).child("number").setValue("90"+ numberToSend);
         myRef.child("users").child(device_id).child("is_online").setValue("false");
         //myRef.child("users").child(numberToSend).child("device_id").setValue(device_id);
->>>>>>> Stashed changes
+
 
         openDialog();
 
