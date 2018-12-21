@@ -66,7 +66,7 @@ public class AddNumberActivity extends AppCompatActivity {
         editTextCarrierNumber = (EditText) findViewById(R.id.number_to_add);
         String numberToSend = editTextCarrierNumber.getText().toString();
 
-        ccp.registerCarrierNumberEditText(editTextCarrierNumber);
+        //ccp.registerCarrierNumberEditText(editTextCarrierNumber);
 
         getCountryCode();
 
