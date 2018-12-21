@@ -13,7 +13,7 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_privacy_policy);
 
 
-        TextView textView = (TextView) findViewById(R.id.text_view);
+        TextView textView = (TextView) findViewById(R.id.privacy_policy_text);
         textView.setMovementMethod(new ScrollingMovementMethod());
     }
 }

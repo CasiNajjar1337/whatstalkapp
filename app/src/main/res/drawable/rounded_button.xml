@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <solid android:color="@color/darkblue"/>
-    <corners android:radius="20dp"/>
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <corners android:radius="20dp"/>
+        <gradient
+            android:angle="45"
+            android:endColor="@color/darkblue"
+            android:startColor="@color/colorAccent"
+            android:type="linear" />
+    </shape>
+</item>
+</selector>

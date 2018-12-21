@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Whatstalk</string>
+    <string name="app_name">Whats Woodoo </string>
     <string name="isim">İsim</string>
     <string name="numara">+905555555555</string>
     <string name="online_sure">3dk 25sn</string>
     <string name="go_online_time">19:25:15</string>
     <string name="go_offline_time">19:28:38</string>
-    <string name="add_number_desc">Takip etmek istediğiniz numarayı, başında sıfır olmadan (535...) şeklinde giriniz.Takip işlemi birkaç saat içerisinde başlayacak ve numara çevrimiçi olduğunda bildirim almaya başlayacaksınız.</string>
+    <string name="add_number_desc">Takip etmek istediğiniz numarayı, başında sıfır olmadan (5**...) şeklinde giriniz.Takip işlemi birkaç saat içerisinde başlayacak ve numara çevrimiçi olduğunda bildirim almaya başlayacaksınız.</string>
     <string name="add_number_button">Ekle</string>
     <string name="settings">Ayarlar</string>
     <string name="privacy_policy">Gizlilik Sözleşmesi</string>

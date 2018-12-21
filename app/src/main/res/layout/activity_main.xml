@@ -11,11 +11,11 @@
         android:id="@+id/imageSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingRight="10dp"
         android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/ic_whatswoodoo"
+        android:src="@drawable/ic_whatswoodoo3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

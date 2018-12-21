@@ -6,8 +6,8 @@
             android:radius="40dp" />
     <gradient
             android:angle="45"
-            android:endColor="#01f1fa"
-            android:startColor="@color/darkblue"
+            android:endColor="@color/darkblue"
+            android:startColor="#01f1fa"
             android:type="linear" />
 
     <!--android:endColor="#01f1fa"-->
@@ -18,8 +18,8 @@
 
 
     <size
-            android:width="82dp"
-            android:height="82dp" />
+            android:width="100dp"
+            android:height="100dp" />
     <!--<stroke-->
             <!--android:width="2dp"-->
             <!--android:color="#FFFFFF" />-->

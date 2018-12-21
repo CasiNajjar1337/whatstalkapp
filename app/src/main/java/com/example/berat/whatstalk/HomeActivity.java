@@ -1,7 +1,6 @@
 package com.example.berat.whatstalk;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +13,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import mehdi.sakout.fancybuttons.FancyButton;
+
 public class HomeActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -21,14 +22,14 @@ public class HomeActivity extends AppCompatActivity {
 
     private List<ListItem> listItems;
 
-    private FloatingActionButton fab;
+    private FancyButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        fab = (FloatingActionButton)findViewById(R.id.floating_action_button);
+        fab = (FancyButton) findViewById(R.id.btn_add_floating);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -45,8 +46,6 @@ public class HomeActivity extends AppCompatActivity {
                     "15:29"
             );
             listItems.add(listItem);
-
-
 
         adapter = new MyAdapter(listItems, this);
         recyclerView.setAdapter(adapter);
@@ -78,9 +77,7 @@ public class HomeActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
     //    public void addNumber(View view) {
 //        Intent intent = new Intent(this, AddNumberActivity.class);
 //        startActivity(intent);
 }
-
