@@ -1,5 +1,6 @@
 package com.example.berat.whatstalk;
 
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -69,9 +70,12 @@ public class AddNumberActivity extends AppCompatActivity {
         //ccp.registerCarrierNumberEditText(editTextCarrierNumber);
 
         getCountryCode();
+        String device_id = Settings.Secure.getString(getContentResolver(),
+                Settings.Secure.ANDROID_ID);
 
-        myRef.child("users").child(countryCode+numberToSend).child("name").setValue(nameToSend);
-        myRef.child("users").child(countryCode+numberToSend).child("number").setValue(countryCode+numberToSend);
+        myRef.child("users").child(device_id).child("name").setValue(nameToSend);
+        myRef.child("users").child(device_id).child("number").setValue(countryCode+numberToSend);
+        myRef.child("users").child(device_id).child("is_online").setValue("false");
 
         openDialog();
 
