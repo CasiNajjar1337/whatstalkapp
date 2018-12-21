@@ -70,8 +70,8 @@ public class AddNumberActivity extends AppCompatActivity {
 
         getCountryCode();
 
-        myRef.child("users").child(numberToSend).child("name").setValue(nameToSend);
-        myRef.child("users").child(numberToSend).child("number").setValue(countryCode+numberToSend);
+        myRef.child("users").child(countryCode+numberToSend).child("name").setValue(nameToSend);
+        myRef.child("users").child(countryCode+numberToSend).child("number").setValue(countryCode+numberToSend);
 
         openDialog();
 
@@ -82,4 +82,5 @@ public class AddNumberActivity extends AppCompatActivity {
         NumberAddedDialog numberAddedDialog = new NumberAddedDialog();
         numberAddedDialog.show(getSupportFragmentManager(), "number added dialog");
     }
+
 }
