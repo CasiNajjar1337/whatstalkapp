@@ -3,13 +3,13 @@
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#ffffff</item>
-        <item name="colorPrimaryDark">@color/darkblue</item>
+        <item name="colorPrimaryDark">@color/splashcat3b</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/darkblue</item>
-        <item name="colorPrimaryDark">@color/darkblue</item>
+        <item name="colorPrimary">@color/splashcat3b</item>
+        <item name="colorPrimaryDark">@color/splashcat3b</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:actionBarSize">34dp</item>
     </style>

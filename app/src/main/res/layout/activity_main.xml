@@ -4,18 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@color/splashcat3b"
     tools:context=".MainActivity">
-
+    <!--android:background="#26A69A" 0e1111  ff4f4f e54a4a e5e1e1  3e4c43-->
     <ImageView
         android:id="@+id/imageSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_whatswoodoo3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:scaleType="fitEnd"
+        android:src="@drawable/ic_cat3b"/>
 
 </android.support.constraint.ConstraintLayout>

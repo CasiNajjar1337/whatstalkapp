@@ -8,4 +8,8 @@
     <color name="white">#ffffff</color>
     <color name="black">#111111</color>
     <color name="darkblue">#031122</color>
+    <color name="splashdark">#0e1111</color>
+    <color name="splashcat3b">#ff4f4f</color>
+    <color name="splashgrey">#e5e1e0</color>
+    <color name="splashgreen">#5cdb94</color>
 </resources>
