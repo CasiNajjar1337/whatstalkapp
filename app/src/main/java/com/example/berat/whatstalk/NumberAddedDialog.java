@@ -2,6 +2,7 @@ package com.example.berat.whatstalk;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatDialogFragment;
@@ -15,7 +16,7 @@ public class NumberAddedDialog extends AppCompatDialogFragment {
                 .setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        startActivity(new Intent(getActivity(), HomeActivity.class));
                     }
                 });
         return builder.create();

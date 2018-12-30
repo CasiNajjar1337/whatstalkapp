@@ -34,7 +34,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         else
             showNotification(remoteMessage.getData() );
 
-
     }
 
     private void showNotification(Map<String,String> data) {
@@ -109,6 +108,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d("new_token", "Refreshed token: " + s);
         String device_id = Settings.Secure.getString(getContentResolver(),
                 Settings.Secure.ANDROID_ID);
-        myRef.child("users").child(device_id).child("token").setValue(refreshedToken);
+        myRef.child("numbers").child(device_id).child("token").setValue(refreshedToken);
     }
 }

@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".ApplicationClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -41,8 +42,8 @@
 
         <activity
             android:name=".PrivacyPolicyActivity"
-            android:theme="@style/AppTheme2">
-        </activity>
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".RegisteredNumberActivity"></activity>
     </application>
 
 </manifest>

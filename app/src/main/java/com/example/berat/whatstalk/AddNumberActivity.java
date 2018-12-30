@@ -73,18 +73,17 @@ public class AddNumberActivity extends AppCompatActivity {
         String device_id = Settings.Secure.getString(getContentResolver(),
                 Settings.Secure.ANDROID_ID);
 
-        myRef.child("users").child(device_id).child("name").setValue(nameToSend);
-        myRef.child("users").child(device_id).child("number").setValue(countryCode+numberToSend);
-        myRef.child("users").child(device_id).child("is_online").setValue("false");
 
+
+        myRef.child("numbers").child(device_id).child("name").setValue(nameToSend);
+        myRef.child("numbers").child(device_id).child("number").setValue(countryCode+numberToSend);
+        myRef.child("online").child(countryCode+numberToSend).setValue("false");
+        myRef.child("is_added").child(countryCode+numberToSend).setValue("false");
         openDialog();
-
-
     }
 
     public void openDialog(){
         NumberAddedDialog numberAddedDialog = new NumberAddedDialog();
         numberAddedDialog.show(getSupportFragmentManager(), "number added dialog");
     }
-
 }
